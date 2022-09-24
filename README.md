@@ -16,4 +16,8 @@
 
 [템플릿상속](./template_inheritance.md)
 
-[동적웹피이지 만들기](./dynamic.md)
+[동적웹페이지 만들기](./dynamic.md)
+
+[파이썬함수 사용팁](./python_function_tips.md)
+
+[URL 관리방법]

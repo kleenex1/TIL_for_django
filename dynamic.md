@@ -15,9 +15,9 @@ def index(request):
 
     return render(request, 'foods/index.html')
 ```
+* today가 어떻게 나오는지 궁금하면 print를 이용하여 runserver를 하고 콘솔창에서 확인한다.
 
 ![1](./dynamic.assets/%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202022-09-24%20185926.jpg)
-* today가 어떻게 나오는지 궁금하면 print를 이용하여 runserver를 하고 콘솔창에서 확인한다.
 
 ```python
 def index(request):
@@ -29,5 +29,7 @@ def index(request):
 * today라는 변수에 담고,  context 변수를 render함수의 3번째 파라미터로 넘겨준다.
 
 # View에서 넘겨받은 값으로 변환
-* 템플릿 변수를 활용한다.
+
 ![2](./dynamic.assets/%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202022-09-24%20190551.jpg)
+
+* 템플릿 변수를 활용한다.
