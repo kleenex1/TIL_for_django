@@ -20,4 +20,8 @@
 
 [파이썬함수 사용팁](./python_function_tips.md)
 
-[URL 관리방법]
+[URL 관리방법](./manage_url.md)
+
+[템플릿과 뷰 활용](./template_and_view.md)
+
+[에러페이지 처리](./error_pages.md)
