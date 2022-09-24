@@ -9,3 +9,5 @@
 [장고 프로젝트의 구조](./project_structure.md)
 
 [장고의 철학](./reusable_app.md)
+
+[Template Language](./Template_language.md)
