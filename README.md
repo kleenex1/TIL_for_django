@@ -11,3 +11,9 @@
 [장고의 철학](./reusable_app.md)
 
 [Template Language](./Template_language.md)
+
+[샌드위치구조](./sandwitches.md)
+
+[템플릿상속](./template_inheritance.md)
+
+[동적웹피이지 만들기](./dynamic.md)
