@@ -25,3 +25,7 @@
 [템플릿과 뷰 활용](./template_and_view.md)
 
 [에러페이지 처리](./error_pages.md)
+
+[모델(Model)](./model.md)
+
+[마이그레이션](./migration.md)
