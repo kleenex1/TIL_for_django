@@ -30,7 +30,7 @@
 
 [마이그레이션](./migration.md)
 
-[CURD](./CRUD.md)
+[CRUD](./CRUD.md)
 
 [QuerySet](./queryset.md)
 
