@@ -31,3 +31,9 @@
 [마이그레이션](./migration.md)
 
 [CURD](./CRUD.md)
+
+[QuerySet](./queryset.md)
+
+[관리자도구 사용하기](./admin.md)
+
+[Model 적용하기]
