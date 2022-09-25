@@ -30,4 +30,4 @@
 
 [마이그레이션](./migration.md)
 
-[데이터추가하기 CREATE](./create.md)
+[CURD](./CRUD.md)
