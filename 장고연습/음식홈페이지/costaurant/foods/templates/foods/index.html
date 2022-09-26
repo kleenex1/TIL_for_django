@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block date-block%}
+  <div>{{ date }}</div>
+{% endblock date-block%}
+
+
+{% block food-container %}
+  <div class="food">
+    <img src={% static 'foods/images/chicken.jpg' %} width="300px" height="200px"/>
+    <div class="info">
+      <h3>양념치킨</h3>
+      <P>주머니가 가벼운 당신의 마음까지 생각한 가격!</p>
+      <a href="/foods/chicken">메뉴 보기</a>
+    </div>
+  </div>
+
+  <div class="food">
+    <img src={% static 'foods/images/sushi.jpg' %} width="300px" height="200px"/>
+    <div class="info">
+      <h3>스시세트</h3>
+      <P>주머니가 가벼운 당신의 마음까지 생각한 가격!</p>
+      <a href="#">메뉴 보기</a>
+    </div>
+  </div>
+
+{% endblock food-container %}
