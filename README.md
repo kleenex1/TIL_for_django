@@ -36,4 +36,6 @@
 
 [관리자도구 사용하기](./admin.md)
 
-[Model 적용하기]
+[Model 적용하기](./applying_model.md)
+
+[배포하기](./publish.md)
