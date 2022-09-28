@@ -104,6 +104,8 @@ def index(request):
 ```
 * 기본적으로 틀을 만들어놓을 base.html을 생성하여 css / content가 들어갈 내용들을 장고 템플릿언어를 사용하여 미리 짜놓는다. 
 
+<details>
+<summary>접기/펼치기</summary>
 ```html
 {% extends './base.html' %}
 
@@ -191,6 +193,7 @@ def index(request):
 </div>
 {% endblock content %}
 ```
+</details>
 * index 페이지에서 해당 내용만 채운다.
 
 # 할일 목록 만들기
