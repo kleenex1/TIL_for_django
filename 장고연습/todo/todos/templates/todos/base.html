@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'todos/css/styles.css' %}">
+  <title>오늘의 할일</title>
+  <!--부트스트랩 먹일곳-->
+  {% block css %}
+  {% endblock css %}
+</head>
+
+<body>
+  <h1>기록을 해보자 ~</h1>
+
+  <!--할일/우선순위/마감기한 입력할곳-->
+  <div class="create_content">
+    {% block create_content %}
+    {% endblock create_content %}
+  </div>
+
+  <!--본문 내용 할일 리스트 나올곳-->
+  <div class="content">
+    {% block content %}
+    {% endblock content %}
+  </div>
+</body>
+
+</html>

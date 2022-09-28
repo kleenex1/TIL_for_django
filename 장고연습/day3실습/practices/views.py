@@ -6,7 +6,7 @@ import random
 
 def index(request):
 
-    return render(request, "index.html")
+    return render(request, "practices/index.html")
 
 
 def print_text(request):
@@ -18,7 +18,7 @@ def print_text(request):
         "choice": choice,
     }
 
-    return render(request, "text.html", context)
+    return render(request, "practices/text.html", context)
 
 
 def is_odd_even(request, number):
@@ -30,7 +30,7 @@ def is_odd_even(request, number):
         context["num"] = "짝수"
     elif number % 2 == 1:
         context["num"] = "홀수"
-    return render(request, "is-odd-even.html", context)
+    return render(request, "practices/is-odd-even.html", context)
 
 
 def calculate(request, num1, num2):
@@ -41,11 +41,11 @@ def calculate(request, num1, num2):
     context["minus"] = num1 - num2
     context["divide"] = num1 // num2
     context["multi"] = num1 * num2
-    return render(request, "calculate.html", context)
+    return render(request, "practices/calculate.html", context)
 
 
 def lorem(request):
-    return render(request, "lorem.html")
+    return render(request, "practices/lorem.html")
 
 
 def lorem_page(request):
@@ -61,4 +61,4 @@ def lorem_page(request):
         "rand_list": rand_list,
         "result_list": result,
     }
-    return render(request, "lorem-page.html", context)
+    return render(request, "practices/lorem-page.html", context)
