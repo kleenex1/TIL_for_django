@@ -1,7 +1,11 @@
 # WEB 이해하기
 [web](./WEB.md)
+  
+# 실습기록하기
+[메모앱](./%EC%9E%A5%EA%B3%A0%EC%97%B0%EC%8A%B5/todo/)
 
 # 장고 시작하기
+
 [장고 설치하기](./installation.md)
 [장고의 runserver 의미](./runserver.md)
 [장고 프로젝트의 구조](./project_structure.md)
@@ -24,4 +28,3 @@
 
 [기본정리]
 [Form이란?]
-
