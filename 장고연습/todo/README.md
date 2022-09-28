@@ -106,9 +106,9 @@ def index(request):
 
 <details>
 <summary>접기/펼치기</summary>
+
 ```html
 {% extends './base.html' %}
-
   
 <!--나중에 따로 부트스트랩 적용할 것-->
 {% block css %}
@@ -118,7 +118,6 @@ def index(request):
   integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 {% endblock css %}
 
-  
 {% block create_content %}
 <div>
   <form action="create/">
@@ -193,6 +192,7 @@ def index(request):
 </div>
 {% endblock content %}
 ```
+
 </details>
 * index 페이지에서 해당 내용만 채운다.
 
