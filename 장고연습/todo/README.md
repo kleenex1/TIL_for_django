@@ -9,6 +9,17 @@
 
 # URL 구조를 먼저 만들었다.
 ```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("todos/", include("todos.urls")),
+]
+
+from django.urls import path
+from . import views
+
 urlpatterns = [
 
     path("", views.index),
@@ -20,10 +31,11 @@ urlpatterns = [
 ```
 * 프로젝트 urls 에서 각 App으로 include를 이용하여 url 배분을 하였다.
 * 해당 App(Todos)에서 urls.py 파일에 새로 url들을 분류해주었다.
-* index 페이지에서는 DB에서 계속 목록을 불러올 것이며
-* create/ 에서는 DB 생성 후 redirect를 통해 index화면으로 돌아가게 하며
-* delete/<int:todo_id> 에서는 todo_id 인자를 받아 삭제 후 redirect를 통해 index화면으로 돌아가게 하며
-* edit/<int:todo_id> 에서는 todo_id 인자를 받아 템플릿 언어를 통해 글자에 부트스트랩 \<del>을 통해 할일을 끝냈는지 유무를 표시한다.
+* App urls.py
+    * index 페이지에서는 DB에서 계속 목록을 불러올 것이며
+    * create/ 에서는 DB 생성 후 redirect를 통해 index화면으로 돌아가게 하며
+    * delete/<int:todo_id> 에서는 todo_id 인자를 받아 삭제 후 redirect를 통해 index화면으로 돌아가게 하며
+    * edit/<int:todo_id> 에서는 todo_id 인자를 받아 템플릿 언어를 통해 글자에 부트스트랩 \<del>을 통해 할일을 끝냈는지 유무를 표시한다.
 
 # 모델을 만들었다.
 ```python
