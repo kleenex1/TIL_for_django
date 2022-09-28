@@ -7,7 +7,7 @@
 1.  template은 하나의 html 페이지로 해결하였다. (글 상세 작성 창이 필요 없는 간단한 메모 앱) 
 2. Table/button/input 들은 부트스트랩을 이용하였다. (CRUD 연습 초점)
 
-## URL 구조를 먼저 만들었다.
+# URL 구조를 먼저 만들었다.
 ```python
 urlpatterns = [
 
@@ -25,7 +25,7 @@ urlpatterns = [
 * delete/<int:todo_id> 에서는 todo_id 인자를 받아 삭제 후 redirect를 통해 index화면으로 돌아가게 하며
 * edit/<int:todo_id> 에서는 todo_id 인자를 받아 템플릿 언어를 통해 글자에 부트스트랩 \<del>을 통해 할일을 끝냈는지 유무를 표시한다.
 
-## 모델을 만들었다.
+# 모델을 만들었다.
 ```python
 class Todo(models.Model):
 

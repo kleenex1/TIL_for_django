@@ -6,25 +6,25 @@
 
 # 장고 시작하기
 
-[장고 설치하기](./installation.md)
-[장고의 runserver 의미](./runserver.md)
-[장고 프로젝트의 구조](./project_structure.md)
-[장고의 철학](./reusable_app.md)
-[Template Language](./Template_language.md)
-[샌드위치구조](./sandwitches.md)
-[템플릿상속](./template_inheritance.md)
-[동적웹페이지 만들기](./dynamic.md)
-[파이썬함수 사용팁](./python_function_tips.md)
-[URL 관리방법](./manage_url.md)
-[템플릿과 뷰 활용](./template_and_view.md)
-[에러페이지 처리](./error_pages.md)
-[모델(Model)](./model.md)
-[마이그레이션](./migration.md)
-[CRUD](./CRUD.md)
-[QuerySet](./queryset.md)
-[관리자도구 사용하기](./admin.md)
-[Model 적용하기](./applying_model.md)
-[배포하기](./publish.md)
+[장고 설치하기](./installation.md) <br>
+[장고의 runserver 의미](./runserver.md)<br>
+[장고 프로젝트의 구조](./project_structure.md)<br>
+[장고의 철학](./reusable_app.md)<br>
+[Template Language](./Template_language.md)<br>
+[샌드위치구조](./sandwitches.md)<br>
+[템플릿상속](./template_inheritance.md)<br>
+[동적웹페이지 만들기](./dynamic.md)<br>
+[파이썬함수 사용팁](./python_function_tips.md)<br>
+[URL 관리방법](./manage_url.md)<br>
+[템플릿과 뷰 활용](./template_and_view.md)<br>
+[에러페이지 처리](./error_pages.md)<br>
+[모델(Model)](./model.md)<br>
+[마이그레이션](./migration.md)<br>
+[CRUD](./CRUD.md)<br>
+[QuerySet](./queryset.md)<br>
+[관리자도구 사용하기](./admin.md)<br>
+[Model 적용하기](./applying_model.md)<br>
+[배포하기](./publish.md)<br>
 
-[기본정리]
-[Form이란?]
+[기본정리]<br>
+[Form이란?]<br>
