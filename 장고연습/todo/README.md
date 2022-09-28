@@ -65,6 +65,10 @@ def index(request):
 * index 화면에서 우선순위에 따라 화면에 보여주기 위해 view에서 먼저 데이터를 priority 오름차순 정렬해두었다.
 
 # Template 정의
+
+<details>
+<summary>접기/펼치기</summary>
+
 ```html
 {% load static %}
 
@@ -102,6 +106,8 @@ def index(request):
 </body>
 </html>
 ```
+
+</details>
 * 기본적으로 틀을 만들어놓을 base.html을 생성하여 css / content가 들어갈 내용들을 장고 템플릿언어를 사용하여 미리 짜놓는다. 
 
 <details>
