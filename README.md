@@ -27,4 +27,5 @@
 [배포하기](./publish.md)<br>
 
 [기본정리]<br>
-[Form이란?]<br>
+[Form이란?](./form.md)<br>
+[유효성검사]<br>
