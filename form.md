@@ -24,7 +24,6 @@
     <input type="text">
 </form>
 ```
-![[Pasted image 20221004152338.png]]
 
 ### for & id
 각각의 input태그와 label태그를 묶어주기 위해 label 태그에는 for속성, input태그에는 id가 사용된다. 
