@@ -1,0 +1,21 @@
+{% extends './base.html' %}
+
+{% block body %}
+<table>
+  <th>
+    <td>pk</td>
+    <td>username</td>
+    <td>email</td>
+  </th>
+  
+  {% for user in users %}
+  <tr>
+    <td>{{user.pk}}</a></td>
+    <td><a href="{% url 'detail' user.pk %}">{{user.username}}</a></td>
+  </tr>
+  {% endfor %}
+  
+</table>
+
+
+{% endblock body %}
