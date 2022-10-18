@@ -1,0 +1,17 @@
+{% extends '../base/base.html' %}
+{% block content %}
+  <div class="row mt-5 text-center justify-content-center">
+    <h1 class="my-5">{{ user.username }}님의 프로필</h1>
+    <p class="mb-4">이메일 :
+      {{ user.email }}</p>
+    <div>
+      글작성수 : {{reviews}}
+      댓글작성수 : {{comments}}
+    </div>
+    <a href="{% url 'index' %}" class="btn btn-primary col-2">목록으로</a>
+    {% if request.user.pk == user.pk %}
+    <a href="{% url 'update' user.pk %}" class="btn btn-primary col-2">수정하기</a>
+    <a href="{% url 'delete'%}" class="btn btn-primary col-2">삭제하기</a>
+    {% endif %}
+  </div>
+{% endblock content %}
