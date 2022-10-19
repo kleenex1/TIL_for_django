@@ -1,3 +1,4 @@
+from django.http import HttpResponseForbidden
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, CustomUserChangeForm, ReviewForm, CommentForm
 from django.contrib.auth import get_user_model, update_session_auth_hash
@@ -32,8 +33,8 @@ def accounts_list(request):
 @login_required
 def detail(request, pk):
     user = get_user_model().objects.get(pk=pk)
-    reviews = user.review_set.all().count()
-    comments = user.comment_set.all().count()
+    reviews = user.review_set.all()
+    comments = user.comment_set.all()
     context = {
         'user': user,
         'reviews': reviews,
@@ -63,17 +64,21 @@ def logout(request):
 
 @login_required
 def update(request, pk):
-    if request.method == 'POST':
-        form = CustomUserChangeForm(request.POST, instance=request.user)
-        if form.is_valid():
-            form.save()
-            return redirect('detail', request.user.pk)
+    review = Review.objects.get(pk=pk)
+    if request.user == review.author:
+        if request.method == 'POST':
+            form = CustomUserChangeForm(request.POST, instance=request.user)
+            if form.is_valid():
+                form.save()
+                return redirect('detail', request.user.pk)
+        else:
+            form = CustomUserChangeForm(instance=request.user)
+        context = {
+            'form': form
+        }
+        return render(request, 'accounts/update.html', context)
     else:
-        form = CustomUserChangeForm(instance=request.user)
-    context = {
-        'form': form
-    }
-    return render(request, 'accounts/update.html', context)
+        return HttpResponseForbidden()
 
 @login_required
 def change_password(request):
@@ -100,11 +105,11 @@ def delete(request):
 @login_required
 def review_create(request):
     if request.method == 'POST':
-        user = get_user_model().objects.get(pk=request.user.pk)
+        # user = get_user_model().objects.get(pk=request.user.pk)
         review_form = ReviewForm(request.POST, request.FILES)
         if review_form.is_valid():
             review = review_form.save(commit=False)
-            review.author = user
+            review.author = request.user
             review.save()
             messages.success(request, '글 작성이 완료되었습니다.')
             return redirect('index')
@@ -118,18 +123,23 @@ def review_create(request):
 @login_required
 def review_update(request, pk):
     review = Review.objects.get(pk=pk)
-    if request.method == 'POST':
-        review_form = ReviewForm(request.POST, request.FILES, instance=review)
-        if review_form.is_valid():
-            review_form.save()
-            messages.success(request, '글이 수정되었습니다.')
-            return redirect('review-detail', review.pk)
+    if request.user == review.author:
+        if request.method == 'POST':
+            review_form = ReviewForm(request.POST, request.FILES, instance=review)
+            if review_form.is_valid():
+                review_form.save()
+                messages.success(request, '글이 수정되었습니다.')
+                return redirect('review-detail', review.pk)
+        else:
+            review_form = ReviewForm(instance=review)
+        context = {
+            'review_form': review_form
+        }
+        return render(request, 'reviews/form.html', context)
     else:
-        review_form = ReviewForm(instance=review)
-    context = {
-        'review_form': review_form
-    }
-    return render(request, 'reviews/form.html', context)
+        # return HttpResponseForbidden()
+        messages.warning(request, '작성자만 글을 수정할 수 있습니다.')
+        return redirect('review-detail', review.pk)
 
 @login_required
 def review_delete(request, pk):
@@ -155,13 +165,14 @@ def review_detail(request, pk):
     }
     return render(request, 'reviews/detail.html', context)
 
+@login_required
 def comment_create(request, pk):
     review = Review.objects.get(pk=pk)
-    user = get_user_model().objects.get(pk=request.user.pk)
+    # user = get_user_model().objects.get(pk=request.user.pk)
     comment_form = CommentForm(request.POST)
     if comment_form.is_valid():
         comment = comment_form.save(commit=False)
         comment.review = review
-        comment.author = user
+        comment.author = request.user
         comment.save()
     return redirect('review-detail', review.pk)

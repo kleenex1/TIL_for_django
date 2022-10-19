@@ -4,7 +4,8 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ review.pk }}번 게시글</h1>
+<h5>{{ review.pk }}번 게시글</h5>
+<h2>{{ review.title}}</h2>
 <p>{{ review.created_at|date:"SHORT_DATETIME_FORMAT" }} | {{ review.updated_at|date:"y-m-d D" }}</p>
 <p>{{ review.content }} </p>
 {% if review.image %}
@@ -18,15 +19,17 @@
 <a href="{% url 'index' %}">목록으로</a>
 </div>
 
+{% if request.user.is_authenticated %}
 <h4 class="my-3">댓글</h4>
 <form action="{% url 'comment-create' review.pk %}" method="POST">
     {% csrf_token %}
     {% bootstrap_form comment_form layout='inline'%}
     {% bootstrap_button button_type="submit" content="OK" %}
 </form>
+{% endif %}
 <hr>
 {% for comment in comments %}
-    <p>{{ comment.content }}</p>
+    <p>{{comment.author.username}} : {{ comment.content }}</p>
     <hr>    
 {% empty %}
     <p>댓글이 없어요! 댓글을 써보시겠어요?</p>
