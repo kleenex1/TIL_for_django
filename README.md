@@ -32,3 +32,5 @@
 [Form이란?](./form.md)<br>
 [유효성검증](./validators.md)<br>
 [Form꾸미기](./form2.md)<br>
+[Seeding](./seeding.md)<br>
+[페이지네이션]

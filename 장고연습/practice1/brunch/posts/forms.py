@@ -5,6 +5,7 @@ from django.core.exceptions import ValidationError
 
 
 class PostForm(forms.ModelForm):
+    memo = forms.CharField(max_length=80, validators=[validate_symbols])
 
     class Meta:
         model = Post
