@@ -3,13 +3,9 @@ from .models import Post
 from .validators import validate_symbols
 from django.core.exceptions import ValidationError
 
-# class PostForm(forms.Form):
-#     title = forms.CharField(max_length=50, label="제목")
-#     content = forms.CharField(label="내용", widget=forms.Textarea)
-
 
 class PostForm(forms.ModelForm):
-    
+
     class Meta:
         model = Post
         fields = ["title", "content"]
@@ -25,3 +21,8 @@ class PostForm(forms.ModelForm):
             raise ValidationError('*는 포함될 수 없습니다.')
 
         return title
+
+
+# class PostForm(forms.Form):
+#     title = forms.CharField(max_length=50, label="제목")
+#     content = forms.CharField(label="내용", widget=forms.Textarea)
