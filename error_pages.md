@@ -115,4 +115,4 @@ raise Http404("잘못된 경로입니다!")
     서버가 해당 요청을 처리할 준비가 되지 않았으며 일반적으로는 유지관리를 위해 작동이 중단되거나 과부하가 걸렸을 때를 나타내며 대개 일시적입니다.
     
 
-더 많은 상태 코드에 대해 알고 싶다면 아래 링크를 참고하세요. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+더 많은 상태 코드 아래 링크 참고. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Status](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
