@@ -78,7 +78,7 @@ h1 img{
     color: #fff;
     border: 1px solid #5b595f;
     border-radius: 1px;
-    background: url(../images/pen.svg)no-repeat 75px 11px/16px;
+    background: url(../images/pen.svg) no-repeat 75px 11px/16px;
 }
 .btn_post a:hover{
     color: #ccc;
@@ -126,10 +126,11 @@ h1 img{
     line-height: 2.07;
     letter-spacing: -0.32px;
     overflow: hidden; 
-    text-overflow: 
-    ellipsis; display: 
-    -webkit-box; -webkit-line-clamp: 5; 
-    -webkit-box-orient: vertical; word-wrap:break-word;
+    text-overflow: ellipsis; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical; 
+    word-wrap:break-word;
 }
 .paging{
     text-align: center;
