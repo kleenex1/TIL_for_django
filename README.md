@@ -47,3 +47,6 @@
 [django-widget-tweaks](./widget-tweaks.md)<br>
 [메시지와 이메일오버라이딩](./message_emailoverriding.md)<br>
 [Allauth 정리](./allauth.md)<br>
+
+## 알아둘 것
+[null vs blank](./nullblank.md)<br>
