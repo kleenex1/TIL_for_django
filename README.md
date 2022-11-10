@@ -7,7 +7,7 @@
 [페어실습: 유저, 게시판기능](https://github.com/kleenex1/fourth_pair)
 
 # 장고 시작하기
-
+## 기본 흐름
 [장고 설치하기](./installation.md) <br>
 [장고의 runserver 의미](./runserver.md)<br>
 [장고 프로젝트의 구조](./project_structure.md)<br>
@@ -28,9 +28,16 @@
 [Model 적용하기](./applying_model.md)<br>
 [배포하기](./publish.md)<br>
 
-[기본정리]<br>
+## 기본정리<br>
 [Form이란?](./form.md)<br>
 [유효성검증](./validators.md)<br>
 [Form꾸미기](./form2.md)<br>
 [Seeding](./seeding.md)<br>
 [페이지네이션](./pagination.md)<br>
+
+## 유저<br>
+[유저모델](./User.md)<br>
+[유저로그인](./User2.md)<br>
+[로그인은 얼마나 유지될까](./login.md)<br>
+[닉네임필드추가](./nickname.md)<br>
+[회원가입유효성검사]

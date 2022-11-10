@@ -25,8 +25,7 @@ from django.urls import reverse
 #         curr_page_number = 1
 #     page = paginator.page(curr_page_number)
 #     return render(request, 'posts/post_list.html', {'page': page})
-#     # context = {"posts": posts}
-#     # return render(request, "posts/post_list.html", context)
+
 
 class PostListView(ListView):
     model = Post
@@ -75,9 +74,6 @@ class PostDetailView(DetailView):
     # 컨텍스트로 넘겨줄때는 object라는 키워드와 모델명을 소문자로적은
     # post라는 키워드가 기본적으로 사용된다. 지금 이미 post라고 쓰고
     # 있기 때문에 따로 안적어도 기본적으로 작동한다.
-
-
-
 
 
 # def post_create(request):
@@ -136,7 +132,6 @@ class PostCreateView(CreateView):
         # return reverse('post-detail', kwargs={'post_id': self.object.id})
         # detail view에서 아까 pk로 바꿨기 때문에 pk로 바꿔줘야함!
         return reverse('post-detail', kwargs={'pk': self.object.id})
-
 
 
 # def post_update(request, post_id):
