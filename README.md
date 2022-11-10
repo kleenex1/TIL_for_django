@@ -40,4 +40,10 @@
 [유저로그인](./User2.md)<br>
 [로그인은 얼마나 유지될까](./login.md)<br>
 [닉네임필드추가](./nickname.md)<br>
-[회원가입유효성검사]
+[회원가입유효성검사](./uservalidators.md)<br>
+[이메일 인증](./email.md)<br>
+[비밀번호 관리](./password.md)<br>
+[Allauth url, Settings](./allauthsetting.md)<br>
+[django-widget-tweaks](./widget-tweaks.md)<br>
+[메시지와 이메일오버라이딩](./message_emailoverriding.md)<br>
+[Allauth 정리](./allauth.md)<br>
