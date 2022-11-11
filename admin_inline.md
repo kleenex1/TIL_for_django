@@ -55,3 +55,7 @@ class UserInline(admin.StackedInline):
 UserAdmin.fieldsets += ('Custom fields', {'fields': ('nickname', 'profile_pic', 'intro',)}),
 UserAdmin.inlines = (UserInline)
 ```
+
+https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#working-with-many-to-many-models
+
+https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#working-with-a-model-with-two-or-more-foreign-keys-to-the-same-parent-model
