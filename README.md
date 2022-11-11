@@ -50,3 +50,6 @@
 
 ## 알아둘 것
 [null vs blank](./nullblank.md)<br>
+[Mixin](./mixin.md)<br>
+[Decorator](./decorator.md)<br>
+[관리자페이지 Inline사용하기](./admin_inline.md)<br>
