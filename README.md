@@ -53,3 +53,4 @@
 [Mixin](./mixin.md)<br>
 [Decorator](./decorator.md)<br>
 [관리자페이지 Inline사용하기](./admin_inline.md)<br>
+[manager와 역관계](./manager.md)<br>
