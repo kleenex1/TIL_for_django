@@ -2,7 +2,7 @@
 [web](./TIL_FOR_DJANGO/WEB.md)
   
 # 실습기록하기
-[메모앱](.//TIL_for_django/tree/master/장고연습/todo)
+[메모앱](./TIL_for_django/장고연습/todo)
 <br>
 [페어실습: 유저, 게시판기능](https://github.com/kleenex1/fourth_pair)<br>
 [백엔드 클래스적용: 유저(팔로잉), 게시글, 댓글, 좋아요](https://github.com/kleenex1/cheers)
