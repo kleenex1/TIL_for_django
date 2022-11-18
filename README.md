@@ -5,6 +5,7 @@
 [메모앱](.//TIL_for_django/tree/master/장고연습/todo)
 <br>
 [페어실습: 유저, 게시판기능](https://github.com/kleenex1/fourth_pair)
+[백엔드 클래스적용: 유저(팔로잉), 게시글, 댓글, 좋아요](https://github.com/kleenex1/cheers)
 
 # 장고 시작하기
 ## 기본 흐름
